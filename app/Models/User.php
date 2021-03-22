@@ -47,19 +47,19 @@ class User extends Authenticatable
     {
         //
     }
-    public function hasRole($name, $team = null, $requireAll = false)
+    public function hasRole($name, $requireAll = false)
     {
         //
     }
-    public function hasPermission($permission, $team = null, $requireAll = false)
+    public function hasPermission($permission, $requireAll = false)
     {
         //
     }
-    public function isAbleTo($permission, $team = null, $requireAll = false)
+    public function isAbleTo($permission, $requireAll = false)
     {
         //
     }
-    public function ability($roles, $permissions, $team = null, $options = [])
+    public function ability($roles, $permissions, $options = [])
     {
         //
     }

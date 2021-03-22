@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+Route::middleware(['role:admin'])->group(function () {
+    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('adminDasboard');
+});
+
+
+Route::middleware(['role:colaborator|user'])->group(function () {
+    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('userDasboard');
+});

@@ -18,14 +18,8 @@ class LaratrustSetupTables extends Migration
             $table->bigIncrements('id');
             $table->string('name')->unique();
             $table->string('admin')->nullable();
-            $table->string('description')->nullable();
-            $table->timestamps();
-        });
-
-        Schema::create('roles', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name')->unique();
             $table->string('colaborator')->nullable();
+            $table->string('user')->nullable();
             $table->string('description')->nullable();
             $table->timestamps();
         });

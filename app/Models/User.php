@@ -42,4 +42,25 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function roles()
+    {
+        //
+    }
+    public function hasRole($name, $team = null, $requireAll = false)
+    {
+        //
+    }
+    public function hasPermission($permission, $team = null, $requireAll = false)
+    {
+        //
+    }
+    public function isAbleTo($permission, $team = null, $requireAll = false)
+    {
+        //
+    }
+    public function ability($roles, $permissions, $team = null, $options = [])
+    {
+        //
+    }
 }

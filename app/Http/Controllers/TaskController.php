@@ -15,7 +15,7 @@ class TaskController extends Controller
     public function index()
     {
         $tasks = Task::all();
-        return view('user.dashboard', ['tasks' => $tasks]);
+        return view('welcome', ['tasks' => $tasks]);
     }
 
     /**
@@ -67,7 +67,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return $task->all();
+        return view('user.Tasks')->$task->all();
     }
 
     /**
@@ -117,7 +117,7 @@ class TaskController extends Controller
     {
         $task = Task::find($id);
         $task->delete();
-        
+
         return back()->redirect()->view('user.dashboard');
     }
 }

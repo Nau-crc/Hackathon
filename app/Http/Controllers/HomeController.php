@@ -23,13 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if($user = 'admin')
-        {
-            return route('adminDashboard');
-
-        }elseif($user = 'user')
-        {
-            return route('userDashboard');
-        }
+        return view('home');
     }
 }

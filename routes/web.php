@@ -21,11 +21,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/', function () {
+    return view('welcome');
+});
+
 
 Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('adminDasboard');
+
 
 Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('userDasboard');

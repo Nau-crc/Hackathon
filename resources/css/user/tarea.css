@@ -1,0 +1,93 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
+h3 {
+position: absolute;
+width: 81px;
+height: 21px;
+left: 25px;
+top: 71px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 900;
+font-size: 24px;
+line-height: 85.6%;
+/* identical to box height, or 21px */
+color: #2E1D5F;
+}
+
+.realizar{
+position: absolute;
+width: 52px;
+height: 9px;
+left: 25px;
+top: 92px;
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 85.6%;
+/* identical to box height, or 9px */
+color: #666666;
+}
+
+.fechaLimite{
+    position: relative;
+    width: 89px;
+    height: 27px;
+    left: 271px;
+    top: 73px;
+    background: #C5FFD6;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.fechaLimite .text{
+    width: 65px;
+    height: 19px;
+    top: 77px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 8px;
+    line-height: 11px;
+    color: #2E1D5F;
+}
+
+.fechaLimite .date{
+width: 65px;
+height: 19px;
+left: 300px;
+top: 77px;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 1px;
+/* or 11px */
+color: #2E1D5F;
+}
+
+.descripcion{
+    position: relative;
+    width: 332px;
+    height: 83px;
+    left: 16px;
+    top: 307px;
+    background: #E4FBFF;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.check{
+position: absolute;
+left: 88.86%;
+right: 6.33%;
+top: 62.65%;
+bottom: 24.1%;
+}

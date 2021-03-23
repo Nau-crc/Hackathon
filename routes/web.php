@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
-use AdminController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,20 +21,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/adminDashboard', function () {
-    return view('admin.dashboard');
-});
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
+Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('adminDasboard');
 
-Route::middleware(['role:admin'])->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('adminDasboard');
-});
-
-
-Route::middleware(['role:colaborator|user'])->group(function () {
-    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('userDasboard');
-});
+Route::get('/user/dashboard', [UserController::class, 'dashboard'])->name('userDasboard');

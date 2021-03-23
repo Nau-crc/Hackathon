@@ -11,8 +11,8 @@
 
         <!-- Styles -->
     </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+    <body class="container">
+        <div class="login">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -28,5 +28,13 @@
             @endif
 
         </div>
-    </body>
+
+    <footer class="userFooter">
+    
+        <button type="button" class="messageButton" alt="botonMensaje">
+            <img src="{{ asset('./assets/message.svg') }}"></img>
+        </button>
+
+    </footer>
+</body>
 </html>

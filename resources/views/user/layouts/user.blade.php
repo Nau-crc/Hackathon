@@ -19,6 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -79,5 +80,13 @@
             @yield('content')
         </main>
     </div>
+
+    <footer class="userFooter">
+    
+        <button class="messageButton" alt="botonMensaje">
+            <i src="./assets/login.svg"></i>
+        </button>
+
+    </footer>
 </body>
 </html>

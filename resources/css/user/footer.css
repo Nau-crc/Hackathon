@@ -1,0 +1,15 @@
+footer {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageButton i{
+    position: absolute;
+    width: 57px;
+    height: 56px;
+    left: 152px;
+    top: 577px;
+}

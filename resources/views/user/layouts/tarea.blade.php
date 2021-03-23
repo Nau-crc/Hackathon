@@ -1,3 +1,6 @@
+@extends('user.layouts.tarea')
+
+@section('content')
 <body>
 
     <div class="terea">
@@ -35,3 +38,4 @@
 
     <link rel="stylesheet" href="tareas.css">
 </body>
+@endsection

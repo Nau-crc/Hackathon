@@ -80,13 +80,5 @@
             @yield('content')
         </main>
     </div>
-
-    <footer class="userFooter">
-    
-        <button class="messageButton" alt="botonMensaje">
-            <i src="./assets/login.svg"></i>
-        </button>
-
-    </footer>
 </body>
 </html>

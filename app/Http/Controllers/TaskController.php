@@ -14,8 +14,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $task = Task::all();
-        return response()->json($task);
+        $tasks = Task::all();
+        return view('user.dashboard', ['tasks' => $tasks]);
     }
 
     /**
@@ -25,7 +25,7 @@ class TaskController extends Controller
      */
     public function create()
     {
-        return response()->json('tasks.create', 201);
+        return view('admin.create');
     }
 
     /**
@@ -56,7 +56,7 @@ class TaskController extends Controller
             'inProgress'=>$request->inProgress,
         ]);
 
-        return response()->json($task, 201);
+        return route('storeTask', ['task' => $task]);
     }
 
     /**
@@ -67,7 +67,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return response()->json($task->all());
+        return $task->all();
     }
 
     /**
@@ -103,7 +103,7 @@ class TaskController extends Controller
         $task = Task::find($id);
         $task->update($request->all());
 
-        return response()->json($task, 200);
+        return route('updateTask',['task' => $task]);
 
     }
 
@@ -117,6 +117,7 @@ class TaskController extends Controller
     {
         $task = Task::find($id);
         $task->delete();
-        return response()->json([], 204);
+        
+        return back()->redirect()->view('user.dashboard');
     }
 }

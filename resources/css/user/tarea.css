@@ -7,18 +7,18 @@
 	outline: none;
 }
 
+
 h3 {
 position: absolute;
 width: 81px;
 height: 21px;
 left: 25px;
-top: 71px;
+top: 1rem;
 font-family: Roboto;
 font-style: normal;
 font-weight: 900;
 font-size: 24px;
-line-height: 85.6%;
-/* identical to box height, or 21px */
+line-height: 21px;
 color: #2E1D5F;
 }
 
@@ -27,7 +27,7 @@ position: absolute;
 width: 52px;
 height: 9px;
 left: 25px;
-top: 92px;
+top: 2.5rem;
 font-family: Roboto;
 font-style: normal;
 font-weight: 500;
@@ -42,7 +42,7 @@ color: #666666;
     width: 89px;
     height: 27px;
     left: 271px;
-    top: 73px;
+    top: 1rem;
     background: #C5FFD6;
     border-radius: 10px 0px 0px 10px;
 }
@@ -78,10 +78,11 @@ color: #2E1D5F;
     width: 332px;
     height: 83px;
     left: 16px;
-    top: 307px;
+    top: 2.3rem;
     background: #E4FBFF;
     border-radius: 10px;
     margin-bottom: 1rem;
+    padding-top: 0.5rem;
 }
 
 .check{
